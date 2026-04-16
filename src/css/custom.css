@@ -48,3 +48,76 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Sidebar Folder Styling */
+.menu__list-item-collapsible::before {
+  content: '▶';
+  font-size: 0.7rem;
+  color: var(--ifm-color-primary);
+  margin-right: 8px;
+  transition: transform 0.2s;
+}
+
+/* Rotate arrow when open */
+.menu__list-item--collapsed .menu__list-item-collapsible::before {
+  transform: rotate(0deg);
+}
+
+.menu__list-item:not(.menu__list-item--collapsed)>.menu__list-item-collapsible::before {
+  transform: rotate(90deg);
+}
+
+/* Remove default Docusaurus arrows */
+.menu__caret {
+  display: none !important;
+}
+
+/* File links */
+.menu__link {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.menu__link:hover {
+  color: var(--ifm-color-primary);
+}
+
+.theme-doc-sidebar-container {
+  border-right: 1px solid #222 !important;
+  background: var(--ifm-navbar-background-color) !important;
+  padding: 20px;
+}
+
+/* Custom protection blur from your theme */
+.hidden-content {
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+  transition: filter 0.5s ease;
+}
+
+/* Ensure the background stays true black (#000000) */
+html[data-theme='dark'] {
+  --ifm-background-color: #000000;
+  --ifm-navbar-background-color: #0a0a0a;
+}
+
+/* The "Explorer Box" look for the sidebar */
+[class*='docSidebarContainer'] {
+  border-right: 1px solid #222 !important;
+  background-color: var(--panel) !important;
+}
+
+/* Matching your h1 style */
+h1 {
+  color: var(--text-bright);
+  font-size: 1.4rem !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hidden-content {
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+}

@@ -131,6 +131,15 @@ const config: Config = {
               label: 'Blog',
               to: '/blog',
             },
+            navbar: {
+              items: [
+                {
+                  type: 'html',
+                  position: 'right',
+                  value: '<div id="status-timer-root"></div>', // We will hydrate this
+                },
+              ],
+            },
             {
               label: 'GitHub',
               href: 'https://github.com/facebook/docusaurus',
