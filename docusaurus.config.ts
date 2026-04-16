@@ -16,14 +16,14 @@ const config: Config = {
 
   // Set the production url of your site here
   url: 'https://crmbaseNET.github.io',
+
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'crmbaseNET'// Usually your GitHub org/user name.
-  projectName: 'crmbaseNET.github.io', // Usually your repo name.
+  organizationName: 'crmbaseNET', // <--- Make sure there is a comma here!
+  projectName: 'crmbaseNET.github.io', // <--- Make sure there is a comma here!
+  trailingSlash: false, // <--- Make sure there is a comma here!
 
   onBrokenLinks: 'throw',
 
